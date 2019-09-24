@@ -13,9 +13,7 @@ import com.badlogic.gdx.scenes.scene2d.Stage;
 
 public class Tutorials extends ApplicationAdapter
 		 {
-			 public static final int FRAME_COLS = 6;
-			 public static final int FRAME_ROWS = 2;
-			 private Texture crouchSkeleton;
+
 			 private Animation<TextureRegion> animation;
 			 private SpriteBatch spriteBatch;
 			 float stateTime;
@@ -23,19 +21,6 @@ public class Tutorials extends ApplicationAdapter
 
 	@Override
 	public void create () {
-		crouchSkeleton = new Texture(Gdx.files.internal("skeleton/SPRITE_SHEETS" +
-				"/FW_Skeleton_Crouching.png"));
-		TextureRegion[][] split = TextureRegion.split(crouchSkeleton, crouchSkeleton.getWidth() / FRAME_COLS,
-				crouchSkeleton.getHeight() / FRAME_ROWS);
-		TextureRegion[] textureRegions = new TextureRegion[8];
-		int index = 0;
-		for (int i = 0; i < split.length; i++) {
-			for (int j = 0; j < split[i].length; j++) {
-				textureRegions[index++] = split[i][j];
-				if(index==8)break;
-			}
-		}
-		animation = new Animation<TextureRegion>(0.08f, textureRegions);
 		spriteBatch = new SpriteBatch();
 		stateTime = 0;
 
@@ -54,6 +39,5 @@ public class Tutorials extends ApplicationAdapter
 	@Override
 	public void dispose () {
 		spriteBatch.dispose();
-		crouchSkeleton.dispose();
 	}
 }
