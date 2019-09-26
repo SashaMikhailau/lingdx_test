@@ -1,9 +1,9 @@
 package com.azya.client;
 
+import com.azya.Tutorials;
 import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.backends.gwt.GwtApplication;
 import com.badlogic.gdx.backends.gwt.GwtApplicationConfiguration;
-import com.azya.Tutorials;
 
 public class HtmlLauncher extends GwtApplication {
 
