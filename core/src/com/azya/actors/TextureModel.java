@@ -1,40 +1,28 @@
 package com.azya.actors;
 
 import com.badlogic.gdx.graphics.Texture;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 public class TextureModel {
-	private Texture attackSpreadSheet;
-	private Texture walkSpreadSheet;
+	private TextureAtlas attackSpreadSheet;
+	private TextureAtlas walkSpreadSheet;
+	private TextureAtlas crouchSpreadSheet;
 
-	public Texture getAttackSpreadSheet() {
+	public TextureAtlas getAttackSpreadSheet() {
 		return attackSpreadSheet;
 	}
 
-	public void setAttackSpreadSheet(Texture attackSpreadSheet) {
-		this.attackSpreadSheet = attackSpreadSheet;
-	}
-
-	public Texture getWalkSpreadSheet() {
+	public TextureAtlas getWalkSpreadSheet() {
 		return walkSpreadSheet;
 	}
 
-	public void setWalkSpreadSheet(Texture walkSpreadSheet) {
-		this.walkSpreadSheet = walkSpreadSheet;
-	}
-
-	public Texture getCrouchSpreadSheet() {
+	public TextureAtlas getCrouchSpreadSheet() {
 		return crouchSpreadSheet;
 	}
 
-	public void setCrouchSpreadSheet(Texture crouchSpreadSheet) {
-		this.crouchSpreadSheet = crouchSpreadSheet;
-	}
-
-	public TextureModel(Texture attackSpreadSheet, Texture walkSpreadSheet, Texture crouchSpreadSheet) {
+	public TextureModel(TextureAtlas attackSpreadSheet, TextureAtlas walkSpreadSheet, TextureAtlas crouchSpreadSheet) {
 		this.attackSpreadSheet = attackSpreadSheet;
 		this.walkSpreadSheet = walkSpreadSheet;
 		this.crouchSpreadSheet = crouchSpreadSheet;
 	}
-
-	private Texture crouchSpreadSheet;
 }

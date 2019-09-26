@@ -22,7 +22,7 @@ allprojects {
 
     version = '1.0'
     ext {
-        appName = "Tutorials"
+        appName = "OneDay"
         gdxVersion = '1.9.10'
         roboVMVersion = '2.3.7'
         box2DLightsVersion = '1.4'
@@ -40,7 +40,7 @@ allprojects {
     }
 }
 
-/*project(":android") {
+project(":android") {
     apply plugin: "android"
 
     configurations { natives }
@@ -61,7 +61,7 @@ allprojects {
         natives "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-x86_64"
         
     }
-}*/
+}
 
 project(":ios") {
     apply plugin: "java-library"
@@ -116,6 +116,7 @@ project(":desktop") {
         api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
         api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
-        
+        api "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+
     }
 }

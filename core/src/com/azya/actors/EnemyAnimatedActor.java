@@ -4,17 +4,29 @@ import com.azya.AnimationUtils;
 import com.azya.MyInputListener;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 
 public class EnemyAnimatedActor extends AnimatedActor {
 	@Override
-	public Animation<TextureRegion> setAnimation(Texture spriteSheet, int colCOunt, int rowCount, int frameCount) {
-		return AnimationUtils.getMirroredAnimationFromSpriteSheetTexture(spriteSheet, colCOunt, rowCount,
-				frameCount);
+	public Animation<TextureAtlas.AtlasRegion> setAnimation(TextureAtlas textureAtlas) {
+		return AnimationUtils.getAnimationFromSpriteSheetTexture(textureAtlas);
 	}
 
 	public EnemyAnimatedActor(TextureModel textureModel) {
 		super(textureModel);
 		addListener(new MyInputListener());
+	}
+	@Override
+	public void draw(Batch batch, float parentAlpha) {
+		if(!currentFrame.isFlipX()){
+			currentFrame.flip(true,false);
+		}
+		batch.draw(currentFrame, getX(), getY(), getOriginX(), getOriginY(), getWidth(), getHeight(),
+				getScaleX(), getScaleY(), getRotation());
+		if(currentFrame.isFlipX()){
+			currentFrame.flip(true,false);
+		}
 	}
 }

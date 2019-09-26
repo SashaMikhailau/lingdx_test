@@ -3,23 +3,24 @@ package com.azya.actors;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
 
 public abstract class AnimatedActor extends Actor {
-	private final Animation<TextureRegion> crouchAnimation;
 	private volatile State state = State.PASSIVE;
-	private Animation<TextureRegion> attackAnimation;
-	private Animation<TextureRegion> walkAnimation;
-	private Animation<TextureRegion> currentAnimation;
+	private final Animation<TextureAtlas.AtlasRegion> crouchAnimation;
+	private Animation<TextureAtlas.AtlasRegion> attackAnimation;
+	private Animation<TextureAtlas.AtlasRegion> walkAnimation;
+	private Animation<TextureAtlas.AtlasRegion> currentAnimation;
 	private float currentAnimationTime = (float) Math.random() * 10;
-	private TextureRegion currentFrame;
+	protected TextureAtlas.AtlasRegion currentFrame;
 	public AnimatedActor(TextureModel textureModel) {
-		crouchAnimation = setAnimation(textureModel.getCrouchSpreadSheet(),6,2,8);
-		walkAnimation = setAnimation(textureModel.getWalkSpreadSheet(),6,4,24);
-		attackAnimation = setAnimation(textureModel.getAttackSpreadSheet(),6,4,20);
+		crouchAnimation = setAnimation(textureModel.getCrouchSpreadSheet());
+		walkAnimation = setAnimation(textureModel.getWalkSpreadSheet());
+		attackAnimation = setAnimation(textureModel.getAttackSpreadSheet());
 		currentAnimation = crouchAnimation;
 	}
 
@@ -36,9 +37,7 @@ public abstract class AnimatedActor extends Actor {
 		}
 	}
 
-	public abstract Animation<TextureRegion> setAnimation(Texture spriteSheet,int colCOunt,
-														  int rowCount,int frameCount);
-
+	public abstract Animation<TextureAtlas.AtlasRegion> setAnimation(TextureAtlas spriteSheet);
 	@Override
 	public void act(float delta) {
 		super.act(delta);
@@ -50,11 +49,7 @@ public abstract class AnimatedActor extends Actor {
 
 
 
-	@Override
-	public void draw(Batch batch, float parentAlpha) {
-		batch.draw(currentFrame, getX(), getY(), getOriginX(), getOriginY(), getWidth(), getHeight(),
-				getScaleX(), getScaleY(), getRotation());
-	}
+
 
 	public void attack(AnimatedActor target) {
 		if (getState() != State.PASSIVE) {

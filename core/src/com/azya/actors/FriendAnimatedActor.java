@@ -1,19 +1,23 @@
 package com.azya.actors;
 
 import com.azya.AnimationUtils;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
+import com.badlogic.gdx.graphics.g2d.Batch;
+import com.badlogic.gdx.graphics.g2d.TextureAtlas;
 
 public class FriendAnimatedActor extends AnimatedActor {
 
 	@Override
-	public Animation<TextureRegion> setAnimation(Texture spriteSheet, int colCOunt, int rowCount, int frameCount) {
-		return AnimationUtils.getAnimationFromSpriteSheetTexture(spriteSheet, colCOunt, rowCount,
-				frameCount);
+	public Animation<TextureAtlas.AtlasRegion> setAnimation(TextureAtlas textureAtlas) {
+		return AnimationUtils.getAnimationFromSpriteSheetTexture(textureAtlas);
 	}
 
 	public FriendAnimatedActor(TextureModel textureModel) {
 		super(textureModel);
+	}
+	@Override
+	public void draw(Batch batch, float parentAlpha) {
+		batch.draw(currentFrame, getX(), getY(), getOriginX(), getOriginY(), getWidth(), getHeight(),
+				getScaleX(), getScaleY(), getRotation());
 	}
 }
