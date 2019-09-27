@@ -1,0 +1,62 @@
+
+hit.png
+size: 1024,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 2, 195
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 0
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 2, 2
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 1
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 161, 195
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 2
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 161, 2
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 3
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 320, 195
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 4
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 320, 2
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 5
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 479, 195
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 6
+FW_Skeleton_Hit_
+  rotate: false
+  xy: 479, 2
+  size: 157, 191
+  orig: 157, 191
+  offset: 0, 0
+  index: 7

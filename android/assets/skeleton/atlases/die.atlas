@@ -1,0 +1,158 @@
+
+die.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 635
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 0
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 424
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 1
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 635
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 2
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 213
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 3
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 424
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 4
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 2
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 5
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 213
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 6
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 2
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 7
+
+die2.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 635
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 8
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 424
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 9
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 635
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 10
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 213
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 11
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 424
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 12
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 2
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 13
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 213
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 14
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 2
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 15
+
+die3.png
+size: 1024,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 213
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 16
+FW_Skeleton_Die_
+  rotate: false
+  xy: 2, 2
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 17
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 213
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 18
+FW_Skeleton_Die_
+  rotate: false
+  xy: 393, 2
+  size: 389, 209
+  orig: 389, 209
+  offset: 0, 0
+  index: 19

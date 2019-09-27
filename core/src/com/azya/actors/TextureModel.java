@@ -7,6 +7,7 @@ public class TextureModel {
 	private TextureAtlas attackSpreadSheet;
 	private TextureAtlas walkSpreadSheet;
 	private TextureAtlas crouchSpreadSheet;
+	private TextureAtlas hitSpreadSheet;
 
 	public TextureAtlas getAttackSpreadSheet() {
 		return attackSpreadSheet;
@@ -20,9 +21,15 @@ public class TextureModel {
 		return crouchSpreadSheet;
 	}
 
-	public TextureModel(TextureAtlas attackSpreadSheet, TextureAtlas walkSpreadSheet, TextureAtlas crouchSpreadSheet) {
+	public TextureAtlas getHitSpreadSheet() {
+		return hitSpreadSheet;
+	}
+
+	public TextureModel(TextureAtlas attackSpreadSheet, TextureAtlas walkSpreadSheet,
+						TextureAtlas crouchSpreadSheet, TextureAtlas hitSpreadSheet) {
 		this.attackSpreadSheet = attackSpreadSheet;
 		this.walkSpreadSheet = walkSpreadSheet;
 		this.crouchSpreadSheet = crouchSpreadSheet;
+		this.hitSpreadSheet = hitSpreadSheet;
 	}
 }

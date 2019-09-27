@@ -1,0 +1,146 @@
+
+attack.png
+size: 1024,1024
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 2, 713
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 0
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 2, 476
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 1
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 197, 713
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 2
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 2, 239
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 3
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 197, 476
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 4
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 392, 713
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 5
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 2, 2
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 6
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 197, 239
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 7
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 392, 476
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 8
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 587, 713
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 9
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 197, 2
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 10
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 392, 239
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 11
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 587, 476
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 12
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 782, 713
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 13
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 392, 2
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 14
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 587, 239
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 15
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 782, 476
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 16
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 587, 2
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 17
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 782, 239
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 18
+FW_Skeleton_Attack_
+  rotate: false
+  xy: 782, 2
+  size: 193, 235
+  orig: 193, 235
+  offset: 0, 0
+  index: 19

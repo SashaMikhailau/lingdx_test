@@ -1,0 +1,62 @@
+
+crouch.png
+size: 1024,512
+format: RGBA8888
+filter: Nearest,Nearest
+repeat: none
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 2, 198
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 0
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 2, 2
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 1
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 148, 198
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 2
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 148, 2
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 3
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 294, 198
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 4
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 294, 2
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 5
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 440, 198
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 6
+FW_Skeleton_Crouching_
+  rotate: false
+  xy: 440, 2
+  size: 144, 194
+  orig: 144, 194
+  offset: 0, 0
+  index: 7
