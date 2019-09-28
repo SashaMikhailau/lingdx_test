@@ -2,6 +2,7 @@ package com.azya.actors;
 
 import com.azya.AnimationUtils;
 import com.azya.MyInputListener;
+import com.azya.battlestage.BattlePosition;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
@@ -14,8 +15,8 @@ public class EnemyAnimatedActor extends AnimatedActor {
 		return AnimationUtils.getAnimationFromSpriteSheetTexture(textureAtlas);
 	}
 
-	public EnemyAnimatedActor(TextureModel textureModel) {
-		super(textureModel);
+	public EnemyAnimatedActor(BattlePosition battlePosition,TextureModel textureModel) {
+		super(battlePosition,textureModel);
 		addListener(new MyInputListener());
 	}
 	@Override

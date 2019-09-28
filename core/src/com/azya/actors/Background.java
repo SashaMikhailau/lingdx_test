@@ -8,7 +8,6 @@ public class Background extends Actor {
 	private Texture texture;
 	public Background(Texture texture) {
 		this.texture = texture;
-		setZIndex(0);
 	}
 
 	@Override
