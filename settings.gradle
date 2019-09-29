@@ -1,1 +1,4 @@
 include /*'android',*/'ios', 'html', 'core', 'desktop'
+include 'shared'
+include 'server'
+

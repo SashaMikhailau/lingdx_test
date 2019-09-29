@@ -19,7 +19,6 @@ buildscript {
 }
 
 allprojects {
-
     version = '1.0'
     ext {
         appName = "OneDay"
