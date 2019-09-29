@@ -1,12 +1,11 @@
 package com.azya.actors;
 
+import com.azya.battlestage.BattlePosition;
+import com.azya.battlestage.BattlePositionResolver;
 import com.azya.rolesystem.Attack;
 import com.azya.stages.MainStage;
-import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.Animation;
-import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
-import com.badlogic.gdx.graphics.g2d.TextureRegion;
 import com.badlogic.gdx.scenes.scene2d.Action;
 import com.badlogic.gdx.scenes.scene2d.Actor;
 import com.badlogic.gdx.scenes.scene2d.actions.Actions;
@@ -18,19 +17,26 @@ public abstract class AnimatedActor extends Actor {
 	private Animation<TextureAtlas.AtlasRegion> walkAnimation;
 	private Animation<TextureAtlas.AtlasRegion> hitAnimation;
 	private Animation<TextureAtlas.AtlasRegion> currentAnimation;
+	private BattlePosition battlePosition;
 	private float currentAnimationTime = (float) Math.random() * 10;
 	protected TextureAtlas.AtlasRegion currentFrame;
-	public AnimatedActor(TextureModel textureModel) {
-		crouchAnimation = setAnimation(textureModel.getCrouchSpreadSheet());
-		walkAnimation = setAnimation(textureModel.getWalkSpreadSheet());
-		attackAnimation = setAnimation(textureModel.getAttackSpreadSheet());
-		hitAnimation = setAnimation(textureModel.getHitSpreadSheet());
+	public AnimatedActor(BattlePosition battlePosition,TextureModel textureModel) {
+		this.battlePosition = battlePosition;
+		new BattlePositionResolver().resolvePosition(this);
+		crouchAnimation = setAnimation(textureModel.getCrouchSpriteSheet());
+		walkAnimation = setAnimation(textureModel.getWalkSpriteSheet());
+		attackAnimation = setAnimation(textureModel.getAttackSpriteSheet());
+		hitAnimation = setAnimation(textureModel.getHitSpriteSheet());
 		currentAnimation = crouchAnimation;
 		setZIndex(1);
 	}
 
 	public State getState() {
 		return state;
+	}
+
+	public BattlePosition getBattlePosition() {
+		return battlePosition;
 	}
 
 	public void setState(State state) {

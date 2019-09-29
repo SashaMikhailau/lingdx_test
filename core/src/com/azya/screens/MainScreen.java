@@ -1,5 +1,6 @@
 package com.azya.screens;
 
+import com.azya.battlestage.BattleStage;
 import com.azya.stages.MainStage;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
@@ -18,10 +19,10 @@ public class MainScreen implements Screen {
 	public static final int VIEWPORT_HEIGHT = 700;
 
 
-	public MainScreen() {
-		stage = new MainStage(new StretchViewport(VIEWPORT_WIDTH, VIEWPORT_HEIGHT));
+	public MainScreen(BattleStage battleStage) {
+		stage = new MainStage(new StretchViewport(VIEWPORT_WIDTH, VIEWPORT_HEIGHT),battleStage);
 		uiSkin = new Skin(Gdx.files.internal("ui/uiskin.json"));
-		final TextButton textButton = new TextButton("Attack", uiSkin, "default");
+/*		final TextButton textButton = new TextButton("Attack", uiSkin, "default");
 		textButton.addListener(new ClickListener() {
 			@Override
 			public void clicked(InputEvent event, float x, float y) {
@@ -31,7 +32,7 @@ public class MainScreen implements Screen {
 		textButton.setHeight(100);
 		textButton.setWidth(100);
 		textButton.setPosition(Gdx.graphics.getWidth() / 2, Gdx.graphics.getHeight() / 2);
-		stage.addActor(textButton);
+		stage.addActor(textButton);*/
 		Gdx.input.setInputProcessor(stage);
 	}
 

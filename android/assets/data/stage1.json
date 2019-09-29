@@ -1,0 +1,60 @@
+{
+  "enemies": {
+    "TOP": {
+     "hp": 100,
+      "initialHp":120,
+      "power":10,
+      "critRate": 0.1,
+      "name": "Skeleton1",
+      "assetName": "skeleton"
+    },
+    "MIDDLE": {
+      "hp": 100,
+      "initialHp":130,
+      "power":10,
+      "critRate": 0.2,
+      "name": "Skeleton2",
+      "assetName": "skeleton"
+    },
+    "BOTTOM": {
+      "hp": 100,
+      "initialHp":140,
+      "power":10,
+      "critRate": 0.3,
+      "name": "Skeleton3",
+      "assetName": "skeleton"
+    }
+  },
+  "foos": {
+    "TOP": {
+      "hp": 100,
+      "initialHp":120,
+      "power":10,
+      "critRate": 0.1,
+      "name": "Skeleton1",
+      "assetName": "skeleton",
+      "mp": 30,
+      "initialMp": 30
+    },
+    "MIDDLE": {
+      "hp": 100,
+      "initialHp":130,
+      "power":10,
+      "critRate": 0.2,
+      "name": "Skeleton2",
+      "assetName": "skeleton",
+      "mp": 20,
+      "initialMp": 25
+    },
+    "BOTTOM": {
+      "hp": 100,
+      "initialHp":140,
+      "power":10,
+      "critRate": 0.3,
+      "name": "Skeleton3",
+      "assetName": "skeleton",
+      "mp": 20,
+      "initialMp": 20
+    }
+  }
+}

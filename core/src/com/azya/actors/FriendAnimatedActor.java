@@ -1,6 +1,7 @@
 package com.azya.actors;
 
 import com.azya.AnimationUtils;
+import com.azya.battlestage.BattlePosition;
 import com.badlogic.gdx.graphics.g2d.Animation;
 import com.badlogic.gdx.graphics.g2d.Batch;
 import com.badlogic.gdx.graphics.g2d.TextureAtlas;
@@ -12,8 +13,8 @@ public class FriendAnimatedActor extends AnimatedActor {
 		return AnimationUtils.getAnimationFromSpriteSheetTexture(textureAtlas);
 	}
 
-	public FriendAnimatedActor(TextureModel textureModel) {
-		super(textureModel);
+	public FriendAnimatedActor(BattlePosition battlePosition,TextureModel textureModel) {
+		super(battlePosition,textureModel);
 	}
 	@Override
 	public void draw(Batch batch, float parentAlpha) {
