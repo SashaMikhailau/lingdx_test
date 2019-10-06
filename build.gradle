@@ -13,7 +13,6 @@ buildscript {
         classpath 'org.wisepersist:gwt-gradle-plugin:1.0.9'
         classpath 'com.android.tools.build:gradle:3.4.1'
         classpath 'com.mobidevelop.robovm:robovm-gradle-plugin:2.3.7'
-        
 
     }
 }
@@ -61,6 +60,36 @@ allprojects {
         
     }
 }*/
+project(":shared") {
+    apply plugin: "java-library"
+
+
+    dependencies {
+        api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+        api "org.projectlombok:lombok:1.18.10:sources"
+        annotationProcessor "org.projectlombok:lombok:1.18.10"
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+
+project(":core") {
+    apply plugin: "java-library"
+
+
+    dependencies {
+        compile project(':shared')
+        api "com.badlogicgames.gdx:gdx:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
+        api "com.fasterxml.jackson.core:jackson-databind:2.0.1"
+        api "com.fasterxml.jackson.core:jackson-annotations:2.0.1"
+        compile 'io.vertx:vertx-tcp-eventbus-bridge:3.8.1'
+        compileOnly "org.projectlombok:lombok:1.18.10"
+        annotationProcessor "org.projectlombok:lombok:1.18.10"
+    }
+}
 
 project(":ios") {
     apply plugin: "java-library"
@@ -91,23 +120,13 @@ project(":html") {
         api "com.badlogicgames.gdx:gdx-backend-gwt:$gdxVersion:sources"
         api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion:sources"
         api "com.badlogicgames.gdx:gdx-box2d-gwt:$gdxVersion:sources"
-        
+        api "com.fasterxml.jackson.core:jackson-databind:2.0.1:sources"
+        api "com.fasterxml.jackson.core:jackson-annotations:2.0.1:sources"
+
     }
 }
 
-project(":core") {
-    apply plugin: "java-library"
 
-
-    dependencies {
-        api "com.badlogicgames.gdx:gdx:$gdxVersion"
-        api "com.badlogicgames.gdx:gdx-box2d:$gdxVersion"
-        compile "com.fasterxml.jackson.core:jackson-databind:2.0.1"
-        compile "com.fasterxml.jackson.core:jackson-annotations:2.0.1"
-        compileOnly "org.projectlombok:lombok:1.18.10"
-        annotationProcessor "org.projectlombok:lombok:1.18.10"
-    }
-}
 
 project(":desktop") {
     apply plugin: "java-library"
@@ -119,6 +138,24 @@ project(":desktop") {
         api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
         api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
         api "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+        api "org.projectlombok:lombok:1.18.10"
+        annotationProcessor "org.projectlombok:lombok:1.18.10"
 
     }
 }
+project(":server") {
+    apply plugin: "java-library"
+
+
+    dependencies {
+        compile project(':shared')
+        implementation project(":core")
+        api "com.badlogicgames.gdx:gdx-backend-lwjgl:$gdxVersion"
+        api "com.badlogicgames.gdx:gdx-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-box2d-platform:$gdxVersion:natives-desktop"
+        api "com.badlogicgames.gdx:gdx-tools:$gdxVersion"
+
+        testCompile group: 'junit', name: 'junit', version: '4.12'
+    }
+}
+

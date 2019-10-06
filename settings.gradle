@@ -1,4 +1,2 @@
-include /*'android',*/'ios', 'html', 'core', 'desktop'
-include 'shared'
-include 'server'
+include /*'android',*/'ios', 'html', 'core', 'desktop','server','shared'
 

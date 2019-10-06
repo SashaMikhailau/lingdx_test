@@ -4,6 +4,6 @@ import lombok.Data;
 
 @Data
 public class HeroModel extends Model {
-    private int mp;
-    private int initialMp;
+	private int mp;
+	private int initialMp;
 }
